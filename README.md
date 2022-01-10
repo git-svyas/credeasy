@@ -13,7 +13,7 @@ a mobile application came as a feasible solution as it saves a
 lot of time and paper too.
 
 
-#Proposed solution
+**#Proposed solution**
 
 This project intends to make records of credit transactions
 easily accessible and maintainable. In this app the user has
@@ -25,7 +25,7 @@ right from his profile screen. You can easily edit or delete the
 profile of a user in future which makes it maintainable.
 
 
-#App Screenshots
+**#App Screenshots**
 
 <p float="left">
 <img src = "https://i.imgur.com/vYXumXg.jpg" width="300"><img     
@@ -36,7 +36,7 @@ src = "https://i.imgur.com/ViESEJv.jpg" width="300">
 src = "https://i.imgur.com/n13tBtZ.jpg" width="300">
 </p>
 
-#Functionality & Concepts used : 
+**#Functionality & Concepts used :**      
 CredEasy has a responsive and user friendly design which 
 helps to make credit records of customers maintainable 
 and accessible.
@@ -53,11 +53,11 @@ main screen.
 6)ConstraintLayout is used for a flexible layout and 
 Materail Design is used to beautify the app.
 
-#Application Link :
+**#Application Link :**
 
 Github repo link : https://github.com/git-svyas/credeasy.git
 
-#Future Scope :
+**#Future Scope :**
 
 In the future a lot many features will be added to the app
 like records of previous transcations, making it available in 
