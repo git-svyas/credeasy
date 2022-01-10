@@ -69,7 +69,7 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
             itemName = itemName,
             itemCredit = itemCredit.toDouble(),
             itemAddress = itemAddress,
-            itemNumber = itemNumber.toString(),
+            itemNumber = itemNumber,
         )
     }
 

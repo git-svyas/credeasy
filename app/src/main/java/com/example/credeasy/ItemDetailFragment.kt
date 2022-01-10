@@ -19,10 +19,6 @@ import com.example.credeasy.data.Item
 import com.example.credeasy.databinding.FragmentItemDetailBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
-
-
-
-
 class ItemDetailFragment : Fragment() {
     private val navigationArgs: ItemDetailFragmentArgs by navArgs()
     lateinit var item: Item
@@ -54,7 +50,7 @@ class ItemDetailFragment : Fragment() {
             itemName.text = item.itemName
             itemCredit.text = item.itemCredit.toString()
             itemCount.text = item.itemAddress
-            itemNumber.text = item.itemNumber.toString()
+            itemNumber.text = item.itemNumber
             deleteItem.setOnClickListener { showConfirmationDialog() }
             editItem.setOnClickListener { editItem() }
             itemCredit.text = rupee + itemCredit.text
