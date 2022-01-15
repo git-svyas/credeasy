@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "957130005033",
+    "project_id": "phoneauth-4d891",
+    "storage_bucket": "phoneauth-4d891.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957130005033:android:e4f9ca522febd7eb531a38",
+        "android_client_info": {
+          "package_name": "com.example.credeasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957130005033-pqeh7sb0c8ip7fhdnlmht1u6oqk19dbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXqSYvEuqsS9lIhGG8KPkqZDY_EdVRyHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957130005033-pqeh7sb0c8ip7fhdnlmht1u6oqk19dbh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

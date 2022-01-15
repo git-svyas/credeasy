@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#F9FAFF"
+tools:context=".Verify"
+android:orientation="vertical"
+android:weightSum="2">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:gravity="center|bottom"
+    android:layout_weight="1">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_verify"
+        android:paddingBottom="40dp"/>
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:gravity="bottom|center"
+    android:layout_weight="1">
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingStart="40dp"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_mobile"
+        android:paddingBottom="15dp"
+        android:textSize="20sp"
+        android:textColor="@color/blue_100"
+        tools:ignore="RtlSymmetry" />
+
+    <com.chaos.view.PinView
+        android:id="@+id/id_otp"
+        style="@style/PinWidget.PinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:itemBackground="#F4F6F9"
+        android:textColor="#1F1F1F"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemRadius="5dp"
+        app:lineColor="#2196F3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/verifyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="#6372FF"
+        android:text="@string/verify"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>
+</LinearLayout>

@@ -1,35 +1,101 @@
 package com.example.credeasy
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.util.Log
 import android.widget.Button
-import androidx.core.content.ContextCompat
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI
-import com.example.credeasy.databinding.ActivityMainBinding
+import android.widget.EditText
+import android.widget.Toast
+import com.google.firebase.FirebaseException
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.PhoneAuthCredential
+import com.google.firebase.auth.PhoneAuthOptions
+import com.google.firebase.auth.PhoneAuthProvider
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
-    private lateinit var navController: NavController
+    lateinit var auth: FirebaseAuth
+    lateinit var storedVerificationId:String
+    lateinit var resendToken: PhoneAuthProvider.ForceResendingToken
+    private lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
-    @SuppressLint("CutPasteId")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        val navHostFragment = supportFragmentManager
-            .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-        navController = navHostFragment.navController
-        NavigationUI.setupActionBarWithNavController(this, navController)
+
+
+        auth=FirebaseAuth.getInstance()
+
+//        Reference
+        val Login=findViewById<Button>(R.id.loginBtn)
+
+
+        val currentUser = auth.currentUser
+        if(currentUser != null) {
+            startActivity(Intent(applicationContext, Home::class.java))
+            finish()
+        }
+
+        Login.setOnClickListener{
+            login()
+        }
+
+        // Callback function for Phone Auth
+        callbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+            override fun onVerificationCompleted(credential: PhoneAuthCredential) {
+                startActivity(Intent(applicationContext, Home::class.java))
+                finish()
+            }
+
+            override fun onVerificationFailed(e: FirebaseException) {
+                Toast.makeText(applicationContext, "Failed", Toast.LENGTH_LONG).show()
+            }
+
+            override fun onCodeSent(
+                verificationId: String,
+                token: PhoneAuthProvider.ForceResendingToken
+            ) {
+
+                Log.d("TAG","onCodeSent:$verificationId")
+                storedVerificationId = verificationId
+                resendToken = token
+
+                val intent = Intent(applicationContext,Verify::class.java)
+                intent.putExtra("storedVerificationId",storedVerificationId)
+                startActivity(intent)
+            }
+        }
 
     }
 
-    /**
-     * Handle navigation when the user chooses Up from the action bar.
-     */
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
+
+
+    private fun login() {
+        val mobileNumber=findViewById<EditText>(R.id.phoneNumber)
+        var number=mobileNumber.text.toString().trim()
+
+        if(number.isNotEmpty()){
+            number= "+91$number"
+            sendVerificationcode (number)
+        }else{
+            Toast.makeText(this,"Enter mobile number",Toast.LENGTH_SHORT).show()
+        }
     }
+
+    private fun sendVerificationcode(number: String) {
+        val options = PhoneAuthOptions.newBuilder(auth)
+            .setPhoneNumber(number) // Phone number to verify
+            .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
+            .setActivity(this) // Activity (for callback binding)
+            .setCallbacks(callbacks) // OnVerificationStateChangedCallbacks
+            .build()
+        PhoneAuthProvider.verifyPhoneNumber(options)
+    }
+
+
 }

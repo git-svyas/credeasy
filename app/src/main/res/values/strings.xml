@@ -23,4 +23,9 @@
     <string name="call">Call</string>
 <!--    <string name="get_location">Get Location</string>-->
     <string name="update">Update</string>
+    <string name="verify">Verify</string>
+    <string name="verify_mobile">Verify mobile</string>
+    <string name="login">LOGIN</string>
+    <string name="_91">+91</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -56,7 +56,7 @@ class AddItemFragment : Fragment() {
                 item.itemAddress,
                 TextView.BufferType.SPANNABLE
             )
-            itemNumber.setText(item.itemNumber.toString(),TextView.BufferType.SPANNABLE)
+            itemNumber.setText(item.itemNumber,TextView.BufferType.SPANNABLE)
             saveAction.setOnClickListener { updateItem() }
         }
     }
