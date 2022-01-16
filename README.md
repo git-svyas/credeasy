@@ -54,7 +54,9 @@ locally and display on the screen.
 5)RecyclerView was used to display all the credit accounts on the
 main screen.  
 6)ConstraintLayout is used for a flexible layout and 
-Materail Design is used to beautify the app.
+Materail Design is used to beautify the app.   
+7)Firebase is used in the app for verifying users with otp 
+authentication.
 
 **# Application Link :**
 
