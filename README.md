@@ -22,8 +22,10 @@ the accounts and display it on a single screen making it
 easy to move from one account to another and view their 
 profile. It also has the functionality to call the credit user 
 right from his profile screen. You can easily edit or delete the 
-profile of a user in future which makes it maintainable.
-
+profile of a user in future which makes it maintainable. Also 
+when you make an app having the question of security arises, 
+so one time password authetication is added to the app making 
+it more secure.
 
 **# App Screenshots**
 
