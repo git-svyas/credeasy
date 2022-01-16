@@ -31,7 +31,7 @@ profile of a user in future which makes it maintainable.
 <img src = "https://i.imgur.com/1Vv2y30.jpg" width="200">
 <img src = "https://i.imgur.com/HzUOyzv.jpg" width="200">
 <img src = "https://i.imgur.com/35NWWRY.jpg" width="200">
-<img src = "https://i.imgur.com/35NWWRY.jpg" width="200>
+<img src = "https://i.imgur.com/xuSIKM0.jpg" width="200>
 <img src = "https://i.imgur.com/xuSIKM0.jpg" width="200">
 <img src = "https://i.imgur.com/M8YdzcO.jpg" width="200">
 <img src = "https://i.imgur.com/Fwhc9MX.jpg" width="200">
