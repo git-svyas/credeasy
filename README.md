@@ -28,12 +28,15 @@ profile of a user in future which makes it maintainable.
 **# App Screenshots**
 
 <p float="left">
-<img src = "https://i.imgur.com/vYXumXg.jpg" width="300"><img     
-src = "https://i.imgur.com/WFHb9XA.jpg" width="300">
-<img src = "https://i.imgur.com/DLEoACu.jpg" width="300"><img   
-src = "https://i.imgur.com/ViESEJv.jpg" width="300">
-<img src = "https://i.imgur.com/9guJcdw.jpg" width="300"><img   
-src = "https://i.imgur.com/n13tBtZ.jpg" width="300">
+<img src = "https://i.imgur.com/1Vv2y30.jpg" width="300">
+<img src = "https://i.imgur.com/HzUOyzv.jpg" width="300">
+<img src = "https://i.imgur.com/35NWWRY.jpg" width="300">
+<img src = "https://i.imgur.com/35NWWRY.jpg" width="300>
+<img src = "https://i.imgur.com/xuSIKM0.jpg" width="300">
+<img src = "https://i.imgur.com/M8YdzcO.jpg" width="300">
+<img src = "https://i.imgur.com/Fwhc9MX.jpg" width="300">
+<img src = "https://i.imgur.com/hQSCsI4.jpg" width="300">
+<img src = "https://i.imgur.com/HUnLPPX.jpg" width="300">                                                        
 </p>
 
 **# Functionality & Concepts used :**      
