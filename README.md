@@ -70,6 +70,3 @@ In the future a lot many features will be added to the app
 like records of previous transcations, making it available in 
 multiple languages and also a payment gateway integrated in the
 app.  
-Also planning to launch this app in my district by cooperating
-with various shops and understanding further requirements of 
-businesses and integrate solutions in the app accordingly.
